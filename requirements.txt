@@ -1,0 +1,16 @@
+torch>=1.1.0
+numpy
+scipy
+scikit-learn
+matplotlib
+librosa
+tensorboard>=1.14
+future
+pyarrow==0.14.1
+lmdb
+tqdm
+fasttext
+configargparse
+soundfile
+pygame
+google-cloud-texttospeech
