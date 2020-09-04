@@ -2,7 +2,7 @@
 
 This is an official pytorch implementation of *Speech Gesture Generation from the Trimodal Context of Text, Audio, and Speaker Identity (SIGGRAPH Asia 2020)*. In this paper, we present an automatic gesture generation model that uses the multimodal context of speech text, audio, and speaker identity to reliably generate gestures. By incorporating a multimodal context and an adversarial training scheme, the proposed model outputs gestures that are human-like and that match with speech content and rhythm. We also introduce a new quantitative evaluation metric, called FGD, for gesture generation models.
 
-### [PAPER](https://) | [VIDEO](https://)
+### [PAPER](https://) | [VIDEO](https://youtu.be/2nDaBHUWpC0)
 
 ![OVERVIEW](.github/overview.jpg)
 
