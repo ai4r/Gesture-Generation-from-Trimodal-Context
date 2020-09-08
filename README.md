@@ -31,7 +31,7 @@ This repository is developed and tested on Ubuntu 18.04, Python 3.6+, and PyTorc
 
 1. Download [the trained model](https://kaistackr-my.sharepoint.com/:u:/g/personal/zeroyy_kaist_ac_kr/EdLj1u3V031Jm0YVJvM_O48BUpw2pBedu7LzLBS0YCB7SA).
 
-0. Download [the preprocessed TED dataset](https://kaistackr-my.sharepoint.com/:u:/g/personal/zeroyy_kaist_ac_kr/EYAPLf8Hvn9Oq9GMljHDTK4BRab7rl9hAOcnjkriqL8qSg) (16GB) and extract the ZIP file into `data/ted_dataset`.
+0. Download [the preprocessed TED dataset](https://kaistackr-my.sharepoint.com/:u:/g/personal/zeroyy_kaist_ac_kr/EYAPLf8Hvn9Oq9GMljHDTK4BRab7rl9hAOcnjkriqL8qSg) (16GB) and extract the ZIP file into `data/ted_dataset`. You can find out the details of the TED datset from [here](https://github.com/youngwoo-yoon/youtube-gesture-dataset), and please refer to the paper how we extended the existing TED dataset.
 
 0. Setup [Google Cloud TTS](https://cloud.google.com/text-to-speech). You need to set the environment variable `GOOGLE_APPLICATION_CREDENTIALS`. Please see [the manual here](https://cloud.google.com/docs/authentication/getting-started). You can skip this step if you're not going to synthesize gesture from custom text.
 
