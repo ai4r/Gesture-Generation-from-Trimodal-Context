@@ -103,8 +103,8 @@ Data Folder
 ├── A generated PKL file (.pkl)
 └── Audio file (.wav)
 ```
-- Place the codec file as the same path with `.blend` file.
-- Confirm the `.pkl` and `.wav` files in the data folder. 
+- Check the codec file as the same path with `.blend` file.
+- Place the `.pkl` and `.wav` files in the data folder. 
 
 
 Open blender file and set configuration :
@@ -139,7 +139,7 @@ Such as a folder of image sequence files and a merged video file:
 * Video file example: 
 
 
-![Video Example](.github/video.png)
+![Video Example](.github/renderAnim.mov)
 
 ## License
 
