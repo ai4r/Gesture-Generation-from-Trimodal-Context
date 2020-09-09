@@ -109,13 +109,16 @@ Data Folder
 
 Open blender file and set configuration :
 
+
 ```
-1. Name of `Data Folder`, `Render Folder`
+1. Name of "Data Folder" and "Render Folder"
 2. Target file - * : for all files
 3. Details of render setting 
+  - render_video : 
+    True (render video) / False (render image frames only)
+  - test_run : 
+    True (render 10 frames for the test) / Fasle (render ordinarly)
   - resolution_percentage : defulat is 100
-  - render_video : True (render video) / False (render image frames only)
-  - test_run : True (render 10 frames for the test) / Fasle (render ordinarly)
   - upsample
   - out_fps 
   - verbose 
