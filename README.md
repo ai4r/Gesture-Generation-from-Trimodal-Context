@@ -93,7 +93,53 @@ To be updated.
 
 ## Blender Animation (from a generated PKL file)
 
-To be updated.
+Assure the file path structure as following:
+
+
+```
+Blender file (poseRender.blend)
+Codec (h264_in_MP4.py)
+Data Folder 
+├── A generated PKL file (.pkl)
+└── Audio file (.wav)
+```
+- Place the codec file as the same path with `.blend` file.
+- Confirm the `.pkl` and `.wav` files in the data folder. 
+
+
+Open blender file and set configuration :
+
+```
+1. Name of `Data Folder`, `Render Folder`
+2. Target file - * : for all files
+3. Details of render setting 
+  - resolution_percentage : defulat is 100
+  - render_video : True (render video) / False (render image frames only)
+  - test_run : True (render 10 frames for the test) / Fasle (render ordinarly)
+  - upsample
+  - out_fps 
+  - verbose 
+  - etc
+```
+
+You can find the details `newBone.py` in blender file.
+Press Run Script button and enjoy! 
+
+If you success the path and configuration set up, you can see the render output.
+Such as a folder of image sequence files and a merged video file:
+
+
+![DataFolder Example](.github/datafolder.png)
+
+* Image sequence file example:
+
+
+![Image Seq Example](.github/imgSeq.png)
+
+* Video file example: 
+
+
+![Video Example](.github/video.png)
 
 ## License
 
