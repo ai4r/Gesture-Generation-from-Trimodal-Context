@@ -137,7 +137,7 @@ Press [Run Script] button and enjoy!
 you can see the render output as below.
 
 
-![blender output](.blender/output.gif)
+![blender output](.github/o.gif)
 
 
 
