@@ -95,8 +95,10 @@ To be updated.
 
 Versions:
 
-* Blender 2.79B 
+* Blender 2.79B                    
+(2.8 version will be supported later.)
 * FFMPEG git-2020-05-10-fc99a24 
+
 
 Assure the file path structure as following:
 
