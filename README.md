@@ -142,7 +142,7 @@ Press [Run Script] button and enjoy!
 you can see the render output as below.
 
 
-![blender output](.github/ot.gif)
+![blender output](.github/ot.gif | width == 300)
 
 
 
