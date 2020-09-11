@@ -102,12 +102,11 @@ Assure the file path structure as following:
 
 
 ```
-
-Blender file (poseRender.blend)
-Codec (h264_in_MP4.py)
-Data Folder 
-├── A generated PKL file (.pkl)
-└── Audio file (.wav)
+┌─ Blender file (poseRender.blend)
+├─ Codec (h264_in_MP4.py)
+└─ Data Folder 
+    ├── A generated PKL file (.pkl)
+    └── Audio file (.wav)
 ```
 - Place the codec file as the same path with `.blend` file.
 - Confirm the `.pkl` and `.wav` files in the data folder. 
@@ -120,17 +119,21 @@ Open blender file and set configuration :
 ```
 1. data_folder                                       ## Name of Data Folder 
 2. render_dir                                        ## Name of Render Folder
-3. target_file                                       ## * : for all files, Names of file : render a specific file
+3. target_file                                       ## * : for all files, 
+                                                       Names of file : render a specific file
 4. You can change the details of render setting 
-  - resolution_percentage                            ## defulat is 100
-  - render_video                                     ## True : render video, False : render image frames only
-  - test_run                                         ## True : render 10 frames for the test, Fasle : render all frames
+  - character_num                                    ## default is "123", 
+                                                        If you create a new mesh, you could change this. 
+                                                        This is corresponding with camera number.
+  - resolution_percentage                            ## default is 100
+  - render_video                                     ## True : render video, 
+                                                        False : render image frames only
+  - test_run                                         ## True : render 10 frames for the test,
+                                                        False : render all frames
   - upsample
   - out_fps 
   - verbose 
   - etc
-
-* you don't need to change [character_num="123"]
 ```
 
 You can find the details `renderAnim.py` in blender file.
@@ -142,7 +145,7 @@ Press [Run Script] button and enjoy!
 you can see the render output as below.
 
 
-![blender output](.github/ot.gif =300x300)
+![blender output](.github/ot.gif)
 
 
 
