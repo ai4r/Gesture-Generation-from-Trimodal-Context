@@ -102,14 +102,19 @@ Assure the file path structure as following:
 
 
 ```
-┌─ Blender file (poseRender.blend)
+┌─ Blender file (poseRender.blend) 
 ├─ Codec (h264_in_MP4.py)
 └─ Data Folder 
     ├── A generated PKL file (.pkl)
     └── Audio file (.wav)
+ 
+ - Input : PKL data & Audio file
+ - Output : Image frames (and video file)
+
 ```
 - Place the codec file as the same path with `.blend` file.
 - Confirm the `.pkl` and `.wav` files in the data folder. 
+
 
 
 Open blender file and set configuration :
@@ -139,11 +144,10 @@ Open blender file and set configuration :
 You can find the details `renderAnim.py` in blender file.
 
 If you success the path and configuration set up, 
-Press [Run Script] button and enjoy! 
+Press <Run Script> button and Enjoy! 
 
 
 you can see the render output as below.
-
 
 ![blender output](.github/ot.gif)
 
