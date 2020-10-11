@@ -220,9 +220,11 @@ def align_words(audio, text):
                                    conservative=False)
     gentle_out = aligner.transcribe(wave_file, logging=logging)
     words_with_timestamps = []
-    for gentle_word in gentle_out.words:
+    for i, gentle_word in enumerate(gentle_out.words):
         if gentle_word.case == 'success':
             words_with_timestamps.append([gentle_word.word, gentle_word.start, gentle_word.end])
+        elif 0 < i < len(gentle_out.words) - 1:
+            words_with_timestamps.append([gentle_word.word, gentle_out.words[i-1].end, gentle_out.words[i+1].start])
 
     return words_with_timestamps
 
