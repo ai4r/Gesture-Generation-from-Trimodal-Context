@@ -13,4 +13,4 @@ fasttext
 configargparse
 soundfile
 pygame
-google-cloud-texttospeech
+google-cloud-texttospeech==1.0.1
