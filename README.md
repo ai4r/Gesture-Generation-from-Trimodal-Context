@@ -29,7 +29,7 @@ This repository is developed and tested on Ubuntu 18.04, Python 3.6+, and PyTorc
 
 ### Preparation
 
-1. Download [the trained model](https://kaistackr-my.sharepoint.com/:u:/g/personal/zeroyy_kaist_ac_kr/EdLj1u3V031Jm0YVJvM_O48BUpw2pBedu7LzLBS0YCB7SA).
+1. Download [the trained models](https://kaistackr-my.sharepoint.com/:u:/g/personal/zeroyy_kaist_ac_kr/Ec1UIsDDLHtKia04_TTRbygBepXORv__kkq-C9IqZs32aA?e=bJGXQr) and extract to `./output` folder (it also includes the trained autoencoder model for FGD).
 
 0. Download [the preprocessed TED dataset](https://kaistackr-my.sharepoint.com/:u:/g/personal/zeroyy_kaist_ac_kr/EYAPLf8Hvn9Oq9GMljHDTK4BRab7rl9hAOcnjkriqL8qSg) (16GB) and extract the ZIP file into `data/ted_dataset`. You can find out the details of the TED datset from [here](https://github.com/youngwoo-yoon/youtube-gesture-dataset), and please refer to the paper how we extended the existing TED dataset.
 
@@ -64,7 +64,7 @@ Generate gestures from speech text. Speech audio is synthesized by Google Cloud 
 python scripts/synthesize.py from_text [trained model path] {en-male, en-female}
 ```
 
-You could select a sample text or input a new text. Input text can be a plain text or [SSML markup text](https://cloud.google.com/text-to-speech/docs/ssml). The third argument in the above command is for selecting TTS voice. You might further tweak TTS in `utils/tts_help.py`.
+You could select a sample text or input a new text. Input text can be a plain text or [SSML markup text](https://cloud.google.com/text-to-speech/docs/ssml). The third argument in the above command is for selecting TTS voice. You might further tweak TTS in `./scripts/utils/tts_help.py`.
  
 
 ## Training
@@ -82,24 +82,31 @@ python scripts/train.py --config=config/speech2gesture.yml
 python scripts/train.py --config=config/joint_embed.yml 
 ```
 
-Caching TED training set (`lmdb_train`) takes tens of minutes at your first run. Model checkpoints and sample results will be saved in subdirectories of `output` folder. Training the proposed model took about 8 h with a RTX 2080 Ti.
+Caching TED training set (`lmdb_train`) takes tens of minutes at your first run. Model checkpoints and sample results will be saved in subdirectories of `./output` folder. Training the proposed model took about 8 h with a RTX 2080 Ti.
 
 Note on reproducibility:  
 unfortunately, we didn't fix a random seed, so you are not able to reproduce the same FGD in the paper. But, several runs with different random seeds mostly fell in a similar FGD range.
 
-## Fréchet Gesture Distance (FGD)
+### Fréchet Gesture Distance (FGD)
 
-To be updated.
+You can train the autoencoder used for FGD. However, please note that FGD will change as you train the autoencoder anew. We recommend you to stick to the checkpoint that we shared.
+ 
+If you want to train the autoencoder anew, prepare the Human3.6M dataset first. For your convenience, we share the dataset file [data_3d_h36m.npz](https://kaistackr-my.sharepoint.com/:u:/g/personal/zeroyy_kaist_ac_kr/EYT3xin3bzlCmar59FaLN8UBbDbK_mPn_8UL6in4W2RP6w?e=Lk9sU8) which was created by following https://github.com/facebookresearch/VideoPose3D/blob/master/DATASETS.md. Put the npz file to `./data/h36m/` folder, then run the training script.
+   
+```
+python scripts/train_feature_extractor.py --config=config/gesture_autoencoder.yml
+```
+   
 
 ## Blender Animation
 
 You can render a character animation from a set of generated PKL and WAV files.
 
 Required:
-* Blender 2.79B (not tested on Blender 2.8)
+* Blender 2.79B (not compatible with Blender 2.8+)
 * FFMPEG 
 
-First, set configurations in `renderAnim.py` script in `blender/poseRender.blend`, and run the script at Blender 2.79B. Then, you will find out rendered frames and a MOV video in the specified output folder.   
+First, set configurations in `renderAnim.py` script in `./blender/poseRender.blend`, and run the script at Blender 2.79B. Then, you will find out rendered frames and a MOV video in the specified output folder.   
 
 ![blender output](.github/render.gif)
 
@@ -115,7 +122,7 @@ Please see `LICENSE.md`
 If you find our work useful in your research, please consider citing:
 
 ```
-@article{Yoon2020Trimodal,
+@article{Yoon2020Speech,
   title={Speech Gesture Generation from the Trimodal Context of Text, Audio, and Speaker Identity},
   author={Youngwoo Yoon and Bok Cha and Joo-Haeng Lee and Minsu Jang and Jaeyeon Lee and Jaehong Kim and Geehyuk Lee},
   journal={ACM Transactions on Graphics},

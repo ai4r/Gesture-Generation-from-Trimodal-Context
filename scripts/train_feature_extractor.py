@@ -109,9 +109,9 @@ def main(config):
 
     # dataset
     mean_dir_vec = np.squeeze(np.array(args.mean_dir_vec))
-    path = '../data/h36m/data_3d_h36m.npz'  # from https://github.com/facebookresearch/VideoPose3D/blob/master/DATASETS.md
-    train_dataset = Human36M(path, mean_dir_vec, is_train=True, augment=True)
-    val_dataset = Human36M(path, mean_dir_vec, is_train=False, augment=True)
+    path = 'data/h36m/data_3d_h36m.npz'  # from https://github.com/facebookresearch/VideoPose3D/blob/master/DATASETS.md
+    train_dataset = Human36M(path, mean_dir_vec, is_train=True, augment=False)
+    val_dataset = Human36M(path, mean_dir_vec, is_train=False, augment=False)
     train_loader = DataLoader(dataset=train_dataset, batch_size=args.batch_size, shuffle=True, drop_last=True)
     test_loader = DataLoader(dataset=val_dataset, batch_size=args.batch_size, shuffle=False, drop_last=True)
 
