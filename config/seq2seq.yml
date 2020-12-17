@@ -23,7 +23,7 @@ z_type: none
 epochs: 100
 batch_size: 128
 learning_rate: 0.0001
-loss_l1_weight: 250
+loss_regression_weight: 250
 loss_kld_weight: 0.1  # weight for continuous motion term
 loss_reg_weight: 25  # weight for motion variance term
 

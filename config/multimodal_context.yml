@@ -25,7 +25,7 @@ input_context: both  # both, audio, text, none
 epochs: 100
 batch_size: 128
 learning_rate: 0.0005
-loss_l1_weight: 500
+loss_regression_weight: 500
 loss_gan_weight: 5.0
 loss_warmup: 10
 loss_kld_weight: 0.1

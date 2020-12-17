@@ -16,7 +16,7 @@ mean_pose: [ 0.0000306,  0.0004946,  0.0008437,  0.0033759, -0.2051629, -0.01434
 epochs: 100
 batch_size: 128
 learning_rate: 0.001
-loss_l1_weight: 100
+loss_regression_weight: 100
 loss_gan_weight: 10.0
 
 # eval params
