@@ -7,7 +7,7 @@ librosa
 tensorboard>=1.14
 future
 pyarrow==0.14.1
-lmdb
+lmdb==0.96
 tqdm
 fasttext
 configargparse
