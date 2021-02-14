@@ -3,7 +3,7 @@ numpy
 scipy
 scikit-learn
 matplotlib
-librosa<=0.7.2
+librosa==0.7.2
 tensorboard>=1.14
 future
 pyarrow==0.14.1
