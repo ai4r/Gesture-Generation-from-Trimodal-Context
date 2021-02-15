@@ -11,6 +11,7 @@ import numpy as np
 import re
 import time
 import math
+import soundfile as sf
 import librosa.display
 
 import matplotlib
@@ -116,7 +117,7 @@ def create_video_and_save(save_path, epoch, prefix, iter_idx, target, output, me
         audio = audio.astype(np.float32)
         sr = 16000
         audio_path = '{}/{}_{:03d}_{}.wav'.format(save_path, prefix, epoch, iter_idx)
-        librosa.output.write_wav(audio_path, audio, sr)
+        sf.write(audio_path, audio, sr)
 
     # save video
     try:
