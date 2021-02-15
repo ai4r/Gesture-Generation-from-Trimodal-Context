@@ -5,7 +5,7 @@ val_data_path: data/ted_dataset/lmdb_val
 test_data_path: data/ted_dataset/lmdb_test
 
 wordembed_dim: 300
-wordembed_path: data/fasttext/crawl-300d-2M-subword.bin
+wordembed_path: data/fasttext/crawl-300d-2M-subword.bin  # from https://fasttext.cc/docs/en/english-vectors.html
 #freeze_wordembed: true
 
 model_save_path: output/train_multimodal_context
