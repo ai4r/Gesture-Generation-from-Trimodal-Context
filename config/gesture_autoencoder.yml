@@ -1,5 +1,9 @@
 name: gesture_autoencoder
 
+train_data_path: data/ted_dataset/lmdb_train
+val_data_path: data/ted_dataset/lmdb_val
+test_data_path: data/ted_dataset/lmdb_test
+
 model_save_path: output/train_h36m_gesture_autoencoder
 random_seed: -1
 
