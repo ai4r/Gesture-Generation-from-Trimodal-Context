@@ -433,7 +433,7 @@ def main(config):
 
     # random seed
     if args.random_seed >= 0:
-        utils.set_random_seed(args.random_seed)
+        utils.train_utils.set_random_seed(args.random_seed)
 
     # set logger
     utils.train_utils.set_logger(args.model_save_path, os.path.basename(__file__).replace('.py', '.log'))

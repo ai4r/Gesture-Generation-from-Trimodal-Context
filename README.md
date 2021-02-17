@@ -112,6 +112,12 @@ First, set configurations in `renderAnim.py` script in `./blender/poseRender.ble
 
 Note that we refined rotations for some joints due to the articulation differences between the rigged skeleton and synthesized skeleton by the gesture generation model.   
 
+
+## Known Issues
+
+* The models use `nn.LeakyReLU(True)` (LeakyReLU with the negative slope of 1). This was our mistake and our intention was `nn.LeakyReLU(inplace=True)`. We did not fix this for reproducibility, but please be aware of this.
+
+
 ## License
 
 Please see `LICENSE.md`
