@@ -110,7 +110,9 @@ First, set configurations in `renderAnim.py` script in `./blender/poseRender.ble
 
 ![blender output](.github/render.gif)
 
-Note that we refined rotations for some joints due to the articulation differences between the rigged skeleton and synthesized skeleton by the gesture generation model.   
+Note that we refined rotations for some joints due to the articulation differences between the rigged skeleton and synthesized skeleton by the gesture generation model.
+
+Character assets used in the paper: [Mannequin](https://blendermarket.com/products/rigged-mannequin-set), [Human](https://blendermarket.com/products/spring-people)
 
 
 ## Known Issues
